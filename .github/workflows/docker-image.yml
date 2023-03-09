@@ -27,10 +27,12 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t iseco/docker-graphql:0.0.2 .
+        docker build -t iseco/docker-graphql:latest .
             
     - name: Push Docker Image
       run: |
         docker push iseco/docker-graphql:0.0.2
+        docker push iseco/docker-graphql:latest
         
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag iseco/docker-graphql:$(date +%s)
